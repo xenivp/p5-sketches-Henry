@@ -114,25 +114,30 @@ function draw() {
   }
   /////// CUE 4 ///////// // purple pink lines 
   else if ( cue4 && soundFile.isPlaying() ) { 
-    background(255);
+    background(255); 
+    var level_variable = map( level, 0, 0.4, 1, 10 );
+   
+    strokeWeight( level_variable);
+   
     if (beatDectected){
-      strokeWeight(4);
+      
       for( var i = 0; i < prevLevels.length; i++){
-        var y = map(prevLevels[i], 0, 0.5, t+i, 200);
-        stroke(y,125,173, 120);
+       strokeWeight( level_variable * 1.4);
+       // var y = map(prevLevels[i], 0, 0.5, t+i, 200);
+        var y = map(prevLevels[i], 0, 0.5, i, 200);
+        stroke(y,y*2,173, 120);
         line(x1(t+i),y1(y),x2(t+i)+20,y2(t+i)+20);
       }
    } else {
-        strokeWeight(2);
+       // strokeWeight(2);
         for( var i = 0; i < prevLevels.length; i++){
-          var y = map(prevLevels[i], 0, 0.5, t+i, 200);
-          stroke(y,125,173, 120);
+          //var y = map(prevLevels[i], 0, 0.5, t+i, 200);
+         var y = map(prevLevels[i], 0, 0.5, i, 200);
+          stroke(y,y*2.3,173, 120);
           line(x1(t+i),y1(y),x2(t+i)+20,y2(t+i)+20);
         }
       } 
-     // t +=0.5;
      t += level; // current amplitude // very funky with t += y
-
  }
 //////// CUE 5 //////  // YELLOW NORMAL CURVE
  else if ( cue5 && soundFile.isPlaying()){
