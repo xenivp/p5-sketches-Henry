@@ -23,7 +23,7 @@
  var framesSinceLastBeat = 0; // once this equals beatHoldFrames, beatCutoff starts to decay.
 
  function preload() {
-  soundFile = loadSound('../SKTTRD_WAITING_ROOM.mp3 ');
+  soundFile = loadSound('SKTTRD_WAITING_ROOM.mp3 ');
 }
 
 function setup() {
