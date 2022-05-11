@@ -22,7 +22,7 @@ function preload() {
 }
 
 function setup() {
- createCanvas(377, 377);
+ createCanvas(377, 360);
  vol_slider = createSlider(0, 1, 0.3, 0.01);//min,max,default,steps
  vol_slider.position(width/2 - 50, height - 50);
  vol_slider.style('width','80px');
@@ -118,7 +118,7 @@ function onBeat() {
 function toggleButton() {
  if ( !soundFile.isPlaying() ) {
      soundFile.play();
-     button.position( width/2 - 20 , height);
+     button.position( width/2 - 20 , height - 20);
      button.html("pause");
  } else {
    soundFile.pause();
