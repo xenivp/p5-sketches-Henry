@@ -1,6 +1,7 @@
 
 function setup() {
   createCanvas(377, 377);
+  //createCanvas(windowWidth,windowHeight);  
 }
 
 let t = 0;
@@ -17,7 +18,7 @@ function draw() {
 
     for(let i = 0;i<100;i+=0.5){
       stroke(orangeness,orangeness,0 ,alpha);
-      line(x1(t+i)/2,y1(t+i)/2,(x2(t+i)+20)/2,(y2(t+i)+20))/2;
+      line(x1(t+i)/2,y1(t+i)/2 ,(x2(t+i)+20)/2,(y2(t+i)+20)/2);
       orangeness+=2;
     }
   
