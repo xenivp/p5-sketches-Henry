@@ -1,7 +1,6 @@
 
 function setup() {
   createCanvas(377, 377);
-  //createCanvas(windowWidth,windowHeight);  
 }
 
 let t = 0;
