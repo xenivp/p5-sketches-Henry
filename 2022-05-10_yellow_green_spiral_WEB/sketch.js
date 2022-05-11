@@ -1,6 +1,6 @@
 
 function setup() {
-  createCanvas(720, 900);
+  createCanvas(377, 377);
   //createCanvas(windowWidth,windowHeight);  
 }
 
