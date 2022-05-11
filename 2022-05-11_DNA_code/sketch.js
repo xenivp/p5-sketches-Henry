@@ -2,7 +2,7 @@ var CircleNum
 var Diameter = 4;
 
 function setup() { 
-  createCanvas(377, 377);
+  createCanvas(400, 377);
   CircleNum = 100;
 
 } 
